@@ -1,0 +1,824 @@
+lines which do not contain the letter <m0>	~ ( .* <m0> .* )
+lines that contain only the letters <m0>	<m0>
+lines using words  ending in <m0>	.* \b [A-Za-z] * <m0> \b .*
+lines which contain only lowercase letters	[a-z] *
+lines that contain the word <m0>	.* \b <m0> \b .*
+lines with words that contain 3 vowels	.* ( ( \b [A-Za-z] + \b ) & ( .* [AEIOUaeiou] .* ) { 3 } ) .*
+lines which have <m0>	.* <m0> .*
+lines using a word that ends in <m0>	.* ( ( \b [A-Za-z] + \b ) & ( .* <m0> ) ) .*
+lines that include three capital letters	( .* [A-Z] .* ) { 3 }
+lines using words that begin with <m0>	.* \b <m0> [A-Za-z] * \b .*
+lines that have at least 5 numbers	( .* [0-9] .* ) { 5 , }
+lines that ends with letter <m0>	.* <m0>
+lines using a word that contains the letters <m0>	.* \b [A-Za-z] * <m0> [A-Za-z] * \b .*
+lines using only three words	( ( [^A-Za-z] ) * \b [A-Za-z] + \b ( [^A-Za-z] ) * ) { 3 }
+lines starting with <m0> followed by words starting with <m1>	<m0> .* \b <m1> [A-Za-z] * \b .*
+lines that have 2 words using 4 letters	( .* \b [A-Za-z] { 4 } \b .* ) { 2 }
+lines that have words ending in <m0>	.* \b [A-Za-z] * <m0> \b .*
+lines which contain the word <m0> and the letter <m1>	( .* \b <m0> \b .* ) & ( .* <m1> .* )
+lines that contain the number <m0> at least twice	( .* <m0> .* ) { 2 }
+lines containing the word <m0>	.* \b <m0> \b .*
+lines with a word ending in <m0> that contain only one word	( [^A-Za-z] ) * \b [A-Za-z] * <m0> \b ( [^A-Za-z] ) *
+lines which contain only an uppercase letter	[A-Z]
+lines that contain at least one numeric in it	.* [0-9] .*
+lines that end in an <m0>	.* <m0>
+lines that have all the letters <m0> , <m1> and <m2>	( .* <m0> .* ) & ( .* <m1> .* ) & ( .* <m2> .* )
+lines having words ending with <m0>	.* \b [A-Za-z] * <m0> \b .*
+lines that contain <m0> and contain <m1>	( .* <m0> .* ) & ( .* <m1> .* )
+lines that contain the numbers <m0>, and <m1>	.* ( <m0> .* <m1> | <m1> .* <m0> ) .*
+lines with the word <m0> followed by words that start with <m1>	.* \b <m0> \b .* \b <m1> [A-Za-z] * \b .*
+lines using <m0> after <m1> or <m2>	.* ( <m1> | <m2> ) .* <m0> .*
+lines that utilize words starting with <m0>	.* ( ( [A-Za-z] + ) & ( \b <m0> .* \b ) ) .*
+lines using <m0> before <m1>	.* <m0> .* <m1> .*
+lines containing a word using the letters <m0>	.* \b [A-Za-z] * <m0> [A-Za-z] * \b .*
+lines using more than 1 character	.* . { 2 , } .*
+lines that contain words with <m0>	.* \b [A-Za-z] * <m0> [A-Za-z] * \b .*
+lines containing a word using <m0> 	.* \b [A-Za-z] * <m0> [A-Za-z] * \b .*
+lines containing instances of <m0> found after <m1>	.* <m1> .* <m0> .*
+lines that contain at least three words and at least one number	( .* \b [A-Za-z] [A-Za-z] * \b .* ) { 3 } & ( .* [0-9] .* )
+lines that contain numbers	.* [0-9] .*
+lines using the word <m0> followed by <m1>	.* \b <m0> \b .* <m1> .*
+lines that have <m0> but not the word <m1>	( .* <m0> .* ) & ( ~ ( .* \b <m1> \b .* ) )
+lines containing words starting with <m0>	.* ( ( \b <m0> .* \b ) & ( [A-Za-z] + ) ) .*
+lines that contain words ending in <m0>	.* ( ( \b [A-Za-z] [A-Za-z] * \b ) & ( .* <m0> ) ) .*
+lines that contain words ending with vowels	.* \b [A-Za-z] * [AEIOUaeiou] \b .*
+lines that use words starting with <m0>	.* \b <m0> [A-Za-z] * \b .*
+lines using 2 words or more	( .* \b [A-Za-z] + \b .* ) { 2 , }
+lines using the word <m0> and <m1>	.* ( .* \b <m0> \b .* ) & ( .* <m1> .* )
+lines that have 5 characters and no vowels	( . { 5 } ) & ( ~ ( .* [AEIOUaeiou] .* ) )
+lines that contain at least one vowel and at least two numbers	( .* [AEIOUaeiou] .* ) & ( .* [0-9] .* ) { 2 }
+lines using at least 3 characters	.* . { 3 } .*
+lines that contain the phrase <m0>	.* ( .* \b <m0> \b .* ) .*
+lines that contain between two to seven words	( [^A-Za-z] * \b [A-Za-z] [A-Za-z] * \b [^A-Za-z] * ) { 2 , 7 }
+lines that use words starting with <m0>	.* \b <m0> [A-Za-z] * \b .*
+lines any words beginning with the letter <m0>	.* ( ( \b [A-Za-z] + \b ) & ( <m0> .* ) ) .*
+lines containing any number with an <m0> in it	.* <m0> .*
+lines which contain only the number <m0>	<m0>
+lines that contain words starting with <m0>	.* \b <m0> [A-Za-z] * \b .*
+lines that contain only three words	( ( [^A-Za-z] ) * \b [A-Za-z] + \b ( [^A-Za-z] ) * ) { 3 }
+lines that mention <m0> in the same line as <m1>	( .* <m0> .* <m1> .* ) | ( .* <m1> .* <m0> .* )
+lines containing <m0> or <m1> before <m2> or <m3> 	.* ( <m0> | <m1> ) .* ( <m2> | <m3> ) .*
+lines where the number <m0> appears	.* <m0> .*
+lines that feature <m0> followed by the word <m1>	.* <m0> .* \b <m1> \b .*
+lines that have within them words ending in <m0>	.* \b [A-Za-z] * <m0> \b .*
+lines using the word <m0>	.* \b <m0> \b .*
+lines that contain <m0> before <m1> or <m2>	.* <m0> .* ( <m1> | <m2> ) .*
+lines that do not contain the word <m0>	~ ( .* \b <m0> \b .* )
+lines using <m0> before <m1>	.* <m0> .* <m1> .*
+lines that include the string <m0>	.* <m0> .*
+lines that contain at least two words starting with <m0> in them	( .* \b <m0> [A-Za-z] * \b .* ) { 2 }
+lines using the word <m0> at least once	.* \b <m0> \b .*
+lines that begin with a number	[0-9] .*
+lines that have words ending with <m0>	.* \b [A-Za-z] * <m0> \b .*
+lines that do not contain the character <m0>	~ ( .* <m0> .* )
+lines using words containing <m0>	.* \b [A-Za-z] * <m0> [A-Za-z] * \b .*
+lines that use words starting with <m0>	.* \b <m0> [A-Za-z] * \b .*
+lines using <m0> 	.* <m0> .*
+lines using words beginning with the letter <m0>	.* \b <m0> [A-Za-z] * \b .*
+lines containing any mention of the word <m0>	.* \b <m0> \b .*
+lines that contain 5 words	( .* \b [A-Za-z] + \b .* ) { 5 }
+lines that have a word beginning with <m0> and a number that begins in <m1>	( .* \b <m0> [A-Za-z] * \b .* ) & ( .* <m1> [0-9] * .* )
+lines that have all of its letters capitalized	~ ( .* [a-z] .* )
+lines using <m0> after <m1>	.* <m1> .* <m0> .*
+lines where there are two consecutive capital letters	.* [A-Z] [A-Z] .*
+lines containing a letter	.* [A-Za-z] .*
+lines that contain the word <m0>	.* \b <m0> \b .*
+lines using a word of 5 letters or less	.* \b [A-Za-z] { 1 , 5 } \b .*
+lines that have words with <m0>	.* \b [A-Za-z] * <m0> [A-Za-z] * \b .*
+lines that using the symbol <m0> or <m1>	.* ( <m0> | <m1> ) .*
+lines that contain the word <m0>	.* \b <m0> \b .*
+lines using words containing <m0> before <m1>	.* ( ( \b [A-Za-z] [A-Za-z] * \b ) & ( .* <m0> .* <m1> .* ) ) .*
+lines that have at least one capital letter	.* [A-Z] .*
+lines that have at least 3, but not more that 6 words	( [^A-Za-z] * \b [A-Za-z] + \b [^A-Za-z] * ) { 3 , 6 }
+lines that contain <m0> or <m1>	.* <m0> .* | .* <m1> .*
+lines that have 1 word in them	.* \b [A-Za-z] [A-Za-z] * \b .*
+lines where <m0> is between a number and <m1>	.* [0-9] .* <m0> .* <m1> .* | .* <m1> .* <m0> .* [0-9] .*
+lines that have words with 7 letters	.* \b [A-Za-z] { 7 } \b .*
+lines that have one number	.* [0-9] .*
+lines containing <m0> before <m1>	.* <m0> .* <m1> .*
+lines containing <m0>, or <m1>	.* ( <m0> | <m1> ) .*
+lines that contain words starting with <m0>	.* ( ( \b <m0> .* \b ) & ( [A-Za-z] + ) ) .*
+lines that include words starting with <m0>	.* ( ( \b [A-Za-z] [A-Za-z] * \b ) & ( <m0> .* ) ) .*
+lines that mention both <m0> and <m1>	( .* <m0> .* ) & ( .* <m1> .* )
+lines that contain <m0> or <m1>	.* ( <m0> | <m1> ) .*
+lines that carry the word <m0> located in between <m1> and <m2>	.* <m1> .* \b <m0> \b .* <m2> .* | .* <m2> .* \b <m0> \b .* <m1> .*
+lines using at least 5 <m0>	( .* <m0> .* ) { 5 , }
+lines that contain at least 2 digits	( .* [0-9] .* ) { 2 , }
+lines using words with <m0>	.* \b [A-Za-z] * <m0> [A-Za-z] * \b .*
+lines that have only 3 words	( ( [^A-Za-z] ) * \b [A-Za-z] + \b ( [^A-Za-z] ) * ) { 3 }
+lines that have 2 or more numbers	( .* [0-9] .* ) { 2 , }
+lines that have a 2 letter sequence	.* [A-Za-z] { 2 } .*
+lines that include words starting with <m0>	( .* ( ( \b [A-Za-z] + \b ) & ( <m0> .* ) ) .* ) .*
+lines not containing 4 or more characters	~ ( .* . { 4 , } .* )
+lines that end containing the letter <m0>	.* <m0>
+lines which have three words	( .* \b [A-Za-z] + \b .* ) { 3 , }
+lines with <m0> before <m1>	.* <m0> .* <m1> .*
+lines that have two or more words ending in <m0>	.* ( .* \b [A-Za-z] * <m0> \b .* ) { 2 } .*
+lines that have 6 words	( .* \b [A-Za-z] + \b .* ) { 6 }
+lines that do not contain any number	~ ( .* [0-9] .* )
+lines containing <m0>, or <m1>	.* ( <m0> | <m1> ) .*
+lines that contain words ending with <m0>	.* \b [A-Za-z] * <m0> \b .*
+lines that contain words starting with <m0>	.* \b <m0> [A-Za-z] * \b .*
+lines where the  word <m0> precedes the word <m1>	.* \b <m0> \b .* \b <m1> \b .*
+lines that do not contain the letter <m0>	~ ( .* <m0> .* )
+lines using the word <m0>	.* \b <m0> \b .*
+lines that have words starting with <m0>	.* ( ( \b [A-Za-z] [A-Za-z] * \b ) & ( <m0> .* ) ) .*
+lines that have words starting with <m0>	.* \b <m0> [A-Za-z] * \b .*
+Find lines that mention <m0> or <m1> but not any with <m2>	( .* ( <m0> | <m1> ) .* ) & ( ~ ( .* <m2> .* ) )
+lines that use <m0> or <m1> before words ending with <m2>	.* ( <m0> | <m1> ) .* \b [A-Za-z] * <m2> \b .*
+lines starting with <m0>	<m0> .*
+lines using three character words begining with the letters <m0>	.* \b <m0> [A-Za-z] \b .*
+lines that contain 3 words and have at least 2 numbers	.* ( .* \b [A-Za-z] + \b .* ) { 3 } & ( .* [0-9] .* ) { 2 } .*
+lines using <m0> after <m1>	.* <m1> .* <m0> .*
+lines which feature the word <m0>	.* \b <m0> \b .*
+lines containing the word <m0>	.* \b <m0> \b .*
+lines that have at least three <m0>	( .* <m0> .* ) { 3 }
+lines that have <m0>	.* <m0> .*
+lines using <m0> after <m1>	.* <m1> .* <m0> .*
+lines which contain a mix of uppercase letters and lowercase letters	( .* [A-Z] .* ) & ( .* [a-z] .* )
+lines where no word is more than 5 characters	~ ( .* \b [A-Za-z] { 6 , } \b .* )
+lines using <m0> in the middle of a word	.* \b [A-Za-z] + <m0> [A-Za-z] + \b .*
+lines using 5 <m0>	( .* <m0> .* ) { 5 }
+lines with capital letters	.* [A-Z] .*
+lines containing <m0>, or <m1>	.* ( <m0> | <m1> ) .*
+lines using a 5 letter sequence	.* [A-Za-z] { 5 } .*
+lines which contain a word starting with <m0>	.* \b <m0> [A-Za-z] * \b .*
+lines that contain words starting with <m0>	.* ( ( \b [A-Za-z] [A-Za-z] * \b ) & ( <m0> .* ) ) .*
+lines utilizing the word <m0>	.* .* \b <m0> \b .*
+lines that have only one <m0>	( [ ^ <m0> ] ) * <m0> ( [ ^ <m0> ] ) *
+lines that have the number <m0>	.* <m0> .*
+lines that contain the letter <m0> followed by a vowel	.* <m0> .* [AEIOUaeiou] .*
+lines that contain words with <m0>	.* ( ( \b [A-Za-z] + \b ) & ( .* <m0> .* ) ) .*
+lines which have at least 7 numbers	.* ( .* [0-9] .* ) { 7 } .*
+lines which end with <m0> 	.* <m0>
+lines that contain words ending with <m0>	.* ( ( \b [A-Za-z] [A-Za-z] * \b ) & ( .* <m0> ) ) .*
+lines that contain a digit	.* [0-9] .*
+lines using a word having the string <m0>	.* \b [A-Za-z] * <m0> [A-Za-z] * \b .*
+lines that are 20 characters or less	. { 0 , 2 0 }
+lines containing a word	.* \b [A-Za-z] + \b .*
+lines that begin with the word <m0>	<m0> \b .*
+lines that contain words starting with <m0>	.* ( ( \b [A-Za-z] [A-Za-z] * \b ) & ( <m0> .* ) ) .*
+lines that have 4 words or less where at least 1 of those words contains the letter sequence <m0>	( [^A-Za-z] * \b [A-Za-z] + \b [^A-Za-z] * ) { 0 , 4 } & ( .* ( ( \b [A-Za-z] + \b ) & ( .* <m0> .* ) ) .* ) { 1 , }
+lines that contain words ending in <m0>	.* \b [A-Za-z] * <m0> \b .*
+lines that have <m0>	.* <m0> .*
+lines that contain three letter words in them	.* \b [A-Za-z] { 3 } \b .*
+lines that contain five letter words	.* \b [A-Za-z] { 5 } \b .*
+lines which do not have <m0>	~ ( .* <m0> .* )
+lines which start with a number	[0-9] .*
+lines that start with a <m0> and end with an <m1>	<m0> .* <m1>
+lines that have instances of a number and a vowel	( .* [0-9] .* ) & ( .* [AEIOUaeiou] .* )
+lines which have both uppercase letters and lowercase letters	( .* [A-Z] .* ) & ( .* [a-z] .* )
+lines containing 5 letter words	.* \b [A-Za-z] { 5 } \b .*
+lines that match <m0> or <m1>	.* ( <m0> | <m1> ) .*
+lines which contain five or more <m0>	( .* <m0> .* ) { 5 , }
+lines that include words starting with <m0>	.* \b <m0> [A-Za-z] * \b .*
+lines containing words that start with <m0>	.* \b <m0> [A-Za-z] * \b .*
+lines containing <m0> or <m1> before <m2> or <m3>	.* ( <m0> | <m1> ) .* ( <m2> | <m3> ) .*
+lines that end with <m0>	.* <m0>
+lines which contain <m0> 	.* <m0> .*
+lines with <m0> but not <m1>	( .* <m0> .* ) & ( ~ ( .* <m1> .* ) )
+lines that start with <m0> 	<m0> .*
+lines using words that end in <m0> or <m1>	.* \b [A-Za-z] * ( <m0> | <m1> ) \b .*
+lines that contain the number <m0> and <m1> and begin with <m2>	( .* <m0> .* ) & ( .* <m1> .* ) & ( <m2> .* )
+lines with an <m0> that comes after a <m1>	.* <m1> .* <m0> .*
+lines utilizing words starting with <m0>	.* ( ( <m0> .* ) & ( \b [A-Za-z] [A-Za-z] * \b ) ) .*
+lines containing words that start with <m0>	.* \b <m0> [A-Za-z] * \b .*
+lines that contain <m0> or <m1> before <m2>	.* ( <m0> | <m1> ) .* <m2> .*
+lines containing <m0> and containing <m1> too	( .* <m0> .* ) & ( .* <m1> .* )
+lines that contain the text <m0>	.* <m0> .*
+lines that contain the text <m0>	.* <m0> .*
+lines that contain five words that begin with <m0>	.* ( .* \b <m0> [A-Za-z] * \b .* ) { 5 } .*
+lines that have words ending with <m0>	.* \b [A-Za-z] * <m0> \b .*
+Look for any line with the <m0> symbol	.* \ <m0> .*
+lines using an instance of <m0>	.* <m0> .*
+lines containing three vowels	( .* [AEIOUaeiou] .* ) { 3 }
+lines containing <m0> and containing <m1> too	( .* <m0> .* ) & ( .* <m1> .* )
+lines that have more than 6 numbers	( .* [0-9] .* ) { 7 , }
+lines with the word <m0> in them	.* ( ( \b [A-Za-z] + \b ) & ( <m0> ) ) .*
+lines beginning with <m0>	<m0> .*
+lines using 2 or more words containing the letters <m0> 	( .* ( \b [A-Za-z] + \b & ( .* <m0> .* ) ) .* ) { 2 , }
+lines that have the word <m0> preceeding the word <m1>	.* \b <m0> \b .* \b <m1> \b .*
+lines which contain a 3 letter string starting with <m0>	.* ( <m0> [A-Za-z] { 2 } ) .*
+lines starting with a <m0>	<m0> .*
+lines that contain the letters <m0>	.* <m0> .*
+lines that are composed of 4 or more words	( .* \b [A-Za-z] + \b .* ) { 4 , }
+lines using the word <m0> and the number <m1>	.* ( .* \b <m0> \b .* ) & ( .* <m1> .* ) .*
+lines utilizing words starting with <m0>	.* \b <m0> [A-Za-z] * \b .*
+lines that use the word <m0> followed by words starting with <m1>	.* \b <m0> \b .* \b <m1> [A-Za-z] * \b .*
+lines that end in a number	.* [0-9]
+lines that use words with <m0>	.* ( ( \b [A-Za-z] + \b ) & ( .* <m0> .* ) ) .*
+lines which have at least 1 numeric character	.* [0-9] .*
+lines that contain at least one word starting with <m0>	.* \b <m0> [A-Za-z] * \b .*
+lines that have <m0>	.* <m0> .*
+lines containing words that start with and end with <m0>	<m0> ( .* <m0> ) ?
+lines containing <m0> and containing <m1> too	( .* <m0> .* ) & ( .* <m1> .* )
+lines that contain words ending with <m0>	.* \b [A-Za-z] * <m0> \b .*
+lines that have 3 numbers and contain the word <m0>	( .* [0-9] .* ) { 3 } & ( .* \b <m0> \b .* )
+lines that contain at least one number	.* [0-9] .*
+lines that contain words starting with <m0>	.* ( ( \b [A-Za-z] + \b ) & ( <m0> .* ) ) .*
+lines that contain a word using at most 6 letters	.* \b [A-Za-z] { 1 , 6 } \b .*
+lines using <m0> or <m1>	.* ( <m0> | <m1> ) .*
+lines containing words using a vowel	.* \b [A-Za-z] * [AEIOUaeiou] [A-Za-z] * \b .*
+lines with words ending in <m0>	.* \b [A-Za-z] * <m0> \b .*
+lines that contain 2 numbers that contain <m0>	( .* <m0> .* ) { 2 }
+lines that contain at least 2 capital letters	( .* [A-Z] .* ) { 2 , }
+lines containing a 6 letter sequence	.* [A-Za-z] { 6 } .*
+lines where the letter <m0> appears more than one time	( .* <m0> .* ) { 2 , }
+lines which contain only vowels	[AEIOUaeiou] *
+lines that contain words ending in <m0>	.* \b [A-Za-z] * <m0> \b .*
+lines containing <m0>	( .* <m0> .* ) .*
+lines using <m0>	.* <m0> .*
+lines containing <m0> and also containing <m1>	( .* <m0> .* ) & ( .* <m1> .* )
+lines that mention <m0>	.* <m0> .*
+lines that contain at least one vowel and at least two numbers	( ( .* [AEIOUaeiou] .* ) & ( .* [0-9] .* ) { 2 } )
+lines that begin with the word <m0>	\b <m0> \b .*
+lines that contain words with <m0>	.* \b [A-Za-z] * <m0> [A-Za-z] * \b .*
+lines which contain 3 or more vowels	( .* [AEIOUaeiou] .* ) { 3 , }
+lines using 3 instances of <m0>	.* ( .* <m0> .* ) { 3 } .*
+lines that contain instances of <m0>, but only if its one of the first three words	( [^A-Za-z] * \b [A-Za-z] + \b [^A-Za-z] * ) { 0 , 2 } [^A-Za-z] * \b <m0> \b .*
+lines which contain a word starting with the letter <m0> and a word starting with the letter <m1>	( .* \b <m0> [A-Za-z] * \b .* ) & ( .* \b <m1> [A-Za-z] * \b .* )
+lines that show <m0> and <m1>	.* ( .* <m0> .* ) & ( .* <m1> .* ) .*
+lines that use words starting with <m0>	.* \b <m0> [A-Za-z] * \b .*
+lines that contain the text <m0>	.* <m0> .*
+lines that start with <m0>	( <m0> .* ) .*
+lines that show the letter <m0> and number <m1>	( .* <m0> .* ) & ( .* <m1> .* )
+lines using <m0> after <m1> or <m2>	.* ( <m1> | <m2> ) .* <m0> .*
+lines that contain both a <m0> and a <m1>	( .* <m0> .* ) & ( .* <m1> .* )
+lines that have a <m0> in them	.* <m0> .*
+lines using at least 6 characters	.* . { 6 } .*
+lines that contain the word <m0>	.* \b <m0> \b .*
+lines using the vowel combination <m0>	.* <m0> .*
+lines containing at least 2 words	( .* \b [A-Za-z] + \b .* ) { 2 , }
+lines containing the word <m0> or the word <m1>	.* \b ( <m0> | <m1> ) \b .*
+lines containing at least 2 characters but not 4 characters or more	. { 2 , 3 }
+lines with no vowels	~ ( .* [AEIOUaeiou] .* )
+lines using words that contain the letter <m0>	.* ( ( \b [A-Za-z] + \b ) & ( .* <m0> .* ) ) .*
+lines containing the word <m0> and containing the word <m1> 	( .* \b <m0> \b .* ) & ( .* \b <m1> \b .* )
+lines using 2 or more words comprised of 5 letters	( .* \b [A-Za-z] { 5 } \b .* ) { 2 , }
+lines starting with <m0>	<m0> .*
+lines that contain <m0> 	.* <m0> .*
+lines using <m0> 	.* <m0> .*
+lines that contain words starting with <m0>	.* \b <m0> [A-Za-z] * \b .*
+lines that end in a digit	.* [0-9]
+lines that have two vowels	( .* [AEIOUaeiou] .* ) { 2 }
+lines having words starting with <m0>	.* \b <m0> [A-Za-z] * \b .*
+lines that contain five vowels	( .* [AEIOUaeiou] .* ) { 5 }
+lines containing <m0> and containing <m1> too	( .* <m0> .* ) & ( .* <m1> .* )
+lines that contain the word <m0> within 5 characters of the word <m1>	.* ( \b <m0> \b . { 1 , 5 } \b <m1> \b | \b <m1> \b . { 1 , 5 } \b <m0> \b ) .*
+lines that end with the number <m0>	.* <m0>
+lines which begin with the word <m0>	( ( \b [A-Za-z] + \b ) & ( <m0> ) ) .*
+lines using at least three numerical characters	( .* [0-9] .* ) { 3 , }
+lines that do not have the letter <m0>	~ ( .* <m0> .* )
+lines that contain words ending in <m0>	.* \b [A-Za-z] * <m0> \b .*
+lines that contain the word <m0>	.* \b <m0> \b .*
+lines which contain the letter <m0> and the letter <m1>	( .* <m0> .* ) & ( .* <m1> .* )
+lines that have a word of 3 letters	.* \b [A-Za-z] { 3 } \b .*
+lines that end with <m0>	.* <m0>
+lines that have the word <m0> included	.* \b <m0> \b .*
+lines that contain at least five words	( .* \b [A-Za-z] [A-Za-z] * \b .* ) { 5 , }
+lines which have a <m0> after a <m1>	.* <m1> .* <m0> .*
+lines which contain the letter <m0> twice	( .* <m0> .* ) { 2 , }
+lines that end with <m0> and contain words that begin with <m1>	.* \b <m1> [A-Za-z] * \b .* <m0>
+lines containing either a <m0> or <m1> character	.* ( <m0> | <m1> ) .*
+lines which contain 2 or more <m0>	( .* <m0> .* ) { 2 , }
+lines that contain words starting with <m0>	.* \b <m0> [A-Za-z] * \b .*
+lines having words ending with <m0>	.* ( ( \b [A-Za-z] + \b ) & ( .* <m0> ) ) .*
+lines ending with <m0>	.* <m0>
+lines containing words starting with the letter <m0>	.* \b <m0> [A-Za-z] * \b .*
+lines with 7 or more words	( .* \b [A-Za-z] + \b .* ) { 7 , }
+lines that contain <m0> and mention <m1>	( .* <m0> .* ) & ( .* <m1> .* )
+lines that contain 5 or more letters	.* ( .* [A-Za-z] .* ) { 5 , } .*
+lines that contain words ending with <m0>	.* ( ( \b .* <m0> \b ) & ( [A-Za-z] + ) ) .*
+lines that contain words and 4 numbers	( .* \b [A-Za-z] + \b .* ) & ( .* [0-9] .* ) { 4 }
+lines that contain words ending with <m0>	.* ( ( \b [A-Za-z] [A-Za-z] * \b ) & ( .* <m0> ) ) .*
+lines using a word containing the letter <m0>	.* ( ( \b [A-Za-z] + \b ) & ( .* <m0> .* ) ) .*
+lines containing the word <m0>	.* \b <m0> \b .*
+lines with all words beginning with <m0>	~ ( .* ( ( \b [A-Za-z] + \b ) & ( ~ ( <m0> .* ) ) ) .* )
+lines that end with <m0>	.* <m0>
+lines that contain 4 letter words ending in <m0>	.* \b [A-Za-z] { 3 } <m0> \b .*
+lines which contain the letter <m0> preceded by a letter	.* [A-Za-z] .* <m0> .*
+lines which have the word <m0>	.* \b <m0> \b .*
+lines that contain <m0> or <m1>	.* ( <m0> | <m1> ) .*
+lines using <m0> between <m1> and <m2>	.* <m1> .* <m0> .* <m2> .*
+lines that have at least two words that start with <m0>	( .* \b <m0> [A-Za-z] * \b .* ) { 2 }
+lines comprised of 5 or more words containing 5 or fewer letters	( .* ( ( \b [A-Za-z] + \b ) & ( [A-Za-z] { 0 , 5 } ) ) .* ) { 5 , }
+lines that contain a number ending with <m0>	.* [0-9] * <m0> .*
+lines that end with the word <m0>	.* \b <m0>
+lines which contain <m0> or <m1>	.* ( <m0> | <m1> ) .*
+lines that contain the word <m0>	.* \b <m0> \b .*
+lines using 4 letter words	.* \b [A-Za-z] { 4 } \b .*
+lines that contain words starting with <m0>	.* ( ( \b [A-Za-z] + \b ) & ( <m0> .* ) ) .*
+lines that utilize words starting with <m0>	.* ( ( \b [A-Za-z] + \b ) & ( <m0> .* ) ) .*
+lines that end in <m0>	.* <m0>
+lines end in an <m0>	.* <m0>
+lines that have at least three words beginning with a vowel	( .* \b [AEIOUaeiou] [A-Za-z] * \b .* ) { 3 }
+lines which contain a 3 letter string	.* ( [A-Za-z] { 3 } ) .*
+lines with <m0> between <m1> and <m2>	.* <m1> .* <m0> .* <m2> .* | .* <m2> .* <m0> .* <m1> .*
+lines that contain the word <m0>	.* \b <m0> \b .*
+lines that contain the number <m0>	.* <m0> .*
+lines that contain 6 letter words beginning with the letter <m0>	.* \b <m0> [A-Za-z] { 5 } \b .*
+lines that contain a word starting with a vowel	.* \b [AEIOUaeiou] [A-Za-z] * \b .*
+lines with <m0> where the word <m1> comes before <m0>	( .* <m0> .* ) & ( .* \b <m1> \b .* <m0> .* )
+lines containing an instance of the name <m0>	.* <m0> .*
+lines which contain <m0> at the start	<m0> .*
+lines that show <m0> and <m1> but not <m2> or <m3>	( ( .* <m0> .* ) & ( .* <m1> .* ) & ( ~ ( .* ( <m2> | <m3> ) .* ) ) )
+lines that include <m0> and <m1> but not <m2>	( .* <m0> .* ) & ( .* <m1> .* ) & ( ~ ( .* <m2> .* ) )
+lines which contain a word ending in <m0>	.* \b [A-Za-z] * <m0> \b .*
+lines that contain <m0> and <m1>	( .* <m0> .* ) & ( .* <m1> .* )
+lines that start with <m0>	<m0> .*
+lines containing words that start with <m0> and end with <m1>	.* \b <m0> [A-Za-z] * <m1> \b .*
+lines containing both <m0> and <m1>	( .* <m0> .* ) & ( .* <m1> .* )
+lines composed with a word	.* \b [A-Za-z] + \b .*
+lines which do not contain a vowel	~ ( .* [AEIOUaeiou] .* )
+lines using words beginning with the letter <m0>	.* \b <m0> [A-Za-z] * \b .*
+lines containing words that end with <m0>	.* \b [A-Za-z] * <m0> \b .*
+lines that contain words beginning in <m0>	.* \b <m0> [A-Za-z] * \b .*
+lines that contain the word <m0> followed by at least one number	.* \b <m0> \b .* [0-9] .*
+lines that contain a word containing 5 or more letters	.* \b [A-Za-z] { 5 , } \b .*
+lines that contain at least three five letter words	( .* \b [A-Za-z] { 5 } \b .* ) { 3 }
+lines that contain <m0> before <m1> or <m2>	.* <m0> .* ( <m1> | <m2> ) .*
+lines that contain words starting with <m0>	.* \b <m0> [A-Za-z] * \b .*
+lines that contain <m0> before <m1> or <m2>	.* <m0> .* ( <m1> | <m2> ) .*
+lines using more than 4 characters	.* . { 5 , } .*
+lines that contain any three vowels	( .* [AEIOUaeiou] .* ) { 3 }
+lines having words ending with <m0>	.* ( ( \b .* <m0> \b ) & ( [A-Za-z] + ) ) .*
+lines which contain <m0>	.* <m0> .*
+lines that use words that are only four letters long	.* \b [A-Za-z] { 4 } \b .*
+lines that have five words that all end with the letter <m0>	( .* ( ( \b .* <m0> \b ) & ( [A-Za-z] + ) ) .* ) { 5 }
+lines containing words that start with <m0>	.* \b <m0> [A-Za-z] * \b .*
+lines containing <m0> or <m1> before <m2> or <m3> 	.* ( <m0> | <m1> ) .* ( <m2> | <m3> ) .*
+lines that use words with <m0>	.* ( ( \b [A-Za-z] + \b ) & ( .* <m0> .* ) ) .*
+lines that have ten words	( .* \b [A-Za-z] + \b .* ) { 1 0 }
+lines containing <m0> after <m1> or <m2>	.* ( <m1> | <m2> ) .* <m0> .*
+lines that end in <m0>	.* <m0>
+lines that contain <m0> and <m1> but not <m2>	( .* <m0> .* ) & ( .* <m1> .* ) & ( ~ ( .* <m2> .* ) )
+lines that end in <m0>	.* <m0>
+lines having the letters <m0>	.* ( ( <m0> ) & ( [A-Za-z] * ) ) .*
+lines that begin with <m0> or <m1>	( <m0> | <m1> ) .*
+lines that contain the letter <m0> and the number <m1>	( .* <m0> .* ) & ( .* <m1> .* )
+lines starting with <m0> followed by a word with <m1>	<m0> .* ( ( \b [A-Za-z] + \b ) & ( .* <m1> .* ) ) .*
+lines that end with the letter <m0>	.* <m0>
+lines using any instance of <m0> or <m1> followed by <m2> or <m3>	.* ( <m0> | <m1> ) .* ( <m2> | <m3> ) .*
+lines that contain a word and five numbers	( .* \b [A-Za-z] [A-Za-z] * \b .* ) & ( .* [0-9] .* ) { 5 }
+lines where <m0> is separated from <m1> with a comma	.* <m0> .* \ , .* <m1> .* | .* <m1> .* \ , .* <m0> .*
+lines that contin words ending in <m0>	.* \b [A-Za-z] * <m0> \b .*
+lines containing the word <m0>	.* \b <m0> \b .*
+lines using a word	.* \b [A-Za-z] + \b .*
+lines which have <m0>, but no instances of <m1> between the letters <m2> and <m3>	( .* <m0> .* ) & ( ~ ( .* <m2> .* <m1> .* <m3> .* | .* <m3> .* <m1> .* <m2> .* ) )
+lines having words ending with <m0>	.* \b [A-Za-z] * <m0> \b .*
+lines that contain three letter words	.* \b [A-Za-z] { 3 } \b .*
+lines using a 3 letter sequence	.* [A-Za-z] { 3 } .*
+lines which contain <m0> or <m1> 	.* ( <m0> | <m1> ) .*
+lines that have the word <m0>	.* <m0> .*
+lines ending in <m0>	.* <m0>
+lines that begin with the phrase <m0>	<m0> .*
+lines that utilize the letters <m0>	.* <m0> .*
+lines that contain the word <m0> but not the word <m1>	( .* \b <m0> \b .* ) & ( ~ ( .* \b <m1> \b .* ) )
+lines using the word <m0> next to a number	( .* \b <m0> \b .* ) & ( .* [0-9] .* )
+lines with <m0> and <m1>	( .* <m1> .* ) & ( .* <m0> .* )
+lines that contain digits	.* [0-9] .*
+lines that contain three <m0>	( .* <m0> .* ) { 3 }
+lines that contain exactly two words	( ( [^A-Za-z] ) * \b [A-Za-z] + \b ( [^A-Za-z] ) * ) { 2 }
+lines using words that begin with <m0> but do not have a <m1>	.* \b ( ( [A-Za-z] + ) & ( <m0> .* ) & ( ~ ( .* <m1> .* ) ) ) \b .*
+lines that contain words starting with <m0>	.* ( ( \b [A-Za-z] [A-Za-z] * \b ) & ( <m0> .* ) ) .*
+lines beginning with words that have a vowel as the first letter	\b [AEIOUaeiou] [A-Za-z] * \b .*
+lines that begin with a numeral	[0-9] .*
+lines which contain the word <m0> but do not contain the word <m1>	( .* \b <m0> \b .* ) & ~ ( .* \b <m1> \b .* )
+lines containing words that begin with <m0> and end with <m1>	.* \b <m0> [A-Za-z] * <m1> \b .*
+lines containing at least 3 words	( .* \b [A-Za-z] + \b .* ) { 3 , }
+lines that have <m0> but not <m1>	( .* <m0> .* ) & ( ~ ( .* <m1> .* ) )
+lines that contain the phrase <m0>	.* <m0> .*
+lines that contain both the word <m0> and the word <m1>	.* ( .* \b <m0> \b .* ) & ( .* \b <m1> \b .* ) .*
+lines that contain words that have the letter <m0> occuring after the letter <m1>	.* \b [A-Za-z] * <m1> [A-Za-z] * <m0> [A-Za-z] * \b .*
+lines that contain 3 numbers and one number contains 1	( .* [0-9] .* ) & ( .* 1 .* )
+lines which begin with <m0>	<m0> .*
+lines using words ending with <m0>	.* ( ( \b .* <m0> \b ) & ( [A-Za-z] + ) ) .*
+lines that contain the word <m0>	.* \b <m0> \b .*
+lines containing usage of the word <m0>	.* \b <m0> \b .*
+lines with words that contain 3 letters	.* \b [A-Za-z] { 3 } \b .*
+lines that use words ending with <m0>	.* \b [A-Za-z] * <m0> \b .*
+lines using more than 3 characters	.* . { 4 , } .*
+lines that contain the word <m0>	.* \b <m0> \b .*
+lines using a word which contains at least 5 letters	.* \b [A-Za-z] { 5 , } \b .*
+lines that use words of at least 9 letters	.* \b [A-Za-z] { 9 , } \b .*
+lines that match the words <m0>	.* \b <m0> \b .*
+lines that contain at least 4 words	( .* \b [A-Za-z] + \b .* ) { 4 , }
+lines using at least 3 <m0>	( .* <m0> .* ) { 3 , }
+lines that contain an <m0>	.* <m0> .*
+lines that contain the symbol <m0>	.* <m0> .*
+3 letter lines starting with <m0>	<m0> [A-Za-z] { 2 }
+lines containing <m0> or <m1> before <m2> or <m3> 	.* ( <m0> | <m1> ) .* ( <m2> | <m3> ) .*
+lines that have at least 2 words of 3 or more letters	( .* \b [A-Za-z] { 3 , } \b .* ) { 2 , }
+lines that contain <m0> between words <m1> and <m2>	.* ( \b <m1> \b .* \ <m0> .* \b <m2> \b | \b <m2> \b .* \ <m0> .* \b <m1> \b ) .*
+lines with words that end in <m0>	.* \b [A-Za-z] * <m0> \b .*
+lines using <m0> or <m1>	.* ( <m0> | <m1> ) .*
+lines that show <m0> in the beginning of the word  and <m1> at the end of the word	.* ( ( \b <m0> [A-Za-z] * \b ) & ( \b [A-Za-z] * <m1> \b ) ) .*
+lines that have <m0> before <m1> and <m2> after <m3>	( .* <m0> .* <m1> .* ) & ( .* <m3> .* <m2> .* )
+lines which contain 5 words starting with <m0>	( .* \b <m0> [A-Za-z] * \b .* ) { 5 , }
+lines which mention <m0>	.* <m0> .*
+lines that contain <m0> with a period immediately after it	.* <m0> \ . .*
+lines using the word <m0>	.* \b <m0> \b .*
+lines containing <m0>	.* <m0> .*
+lines which have the word <m0> and a number	( .* \b <m0> \b .* ) & ( .* [0-9] .* )
+lines using words ending with <m0>	.* \b [A-Za-z] * <m0> \b .*
+lines that end with <m0> and include the phrase <m1>	( .* <m0> ) & ( .* <m1> .* )
+lines that use words starting with <m0>	.* \b <m0> [A-Za-z] * \b .*
+lines beginning with <m0>	<m0> .*
+lines that contain words ending in <m0>	.* ( .* \b [A-Za-z] * <m0> \b .* ) .*
+lines that start with a vowel and ends in an <m0>	[AEIOUaeiou] .* <m0>
+lines starting with the word <m0>	\b <m0> \b .*
+lines that contain 1 to 5 numbers and 1 letter	( [^0-9] * [0-9] [^0-9] * ) { 1 , 5 } & ( .* [A-Za-z] .* )
+lines that end with <m0>	.* <m0>
+lines that utilize <m0> following words starting with <m1>	.* \b <m1> [A-Za-z] * \b .* <m0> .*
+lines that have the word <m0>	.* \b <m0> \b .*
+lines that have words with <m0>	.* \b [A-Za-z] * <m0> [A-Za-z] * \b .*
+lines that have 3 or more words containing the letters <m0>	( .* ( ( \b [A-Za-z] + \b ) & ( .* <m0> .* ) ) .* ) { 3 , }
+lines with instances of <m0> between <m1> and a comma	.* <m1> .* <m0> .* \ , .* | .* \ , .* <m0> .* <m1> .*
+lines that have a word containing <m0> or <m1>	.* \b ( [A-Za-z] + & .* ( <m0> | <m1> ) .* ) \b .*
+lines using the word <m0> or the word <m1> 	( .* \b <m0> \b .* ) | ( .* \b <m1> \b .* )
+lines containing two or more words containing <m0>	( .* \b [A-Za-z] * <m0> [A-Za-z] * \b .* ) { 2 , }
+lines that contain at least one <m0>	.* <m0> .*
+lines that contain a word using the letters <m0>	.* ( ( \b [A-Za-z] + \b ) & ( .* <m0> .* ) ) .*
+lines that have <m0> after <m1> or <m2>	.* ( <m1> | <m2> ) .* <m0> .*
+lines that have three words comprised of 4 characters each	.* ( .* \b [A-Za-z] { 4 } \b .* ) { 3 } .*
+lines ending in <m0>	.* <m0>
+lines which begin with the letter <m0>	<m0> .*
+lines containing <m0> after <m1> or <m2>	.* ( <m1> | <m2> ) .* <m0> .*
+lines that contain 2 numbers and 3 words and contain the letter <m0>	.* ( .* [0-9] .* ) { 2 } & ( .* \b [A-Za-z] + \b .* ) { 3 } & ( .* <m0> .* ) .*
+lines that include one word using at least 2 letters	.* \b [A-Za-z] { 2 , } \b .*
+lines that have a capital <m0>, but not a lowercase <m1>	( .* <m0> .* ) & ( ~ ( .* <m1> .* ) )
+lines that start with the letter <m0> followed by the word <m1>	<m0> .* \b <m1> \b .*
+lines containing <m0>, or <m1>	.* ( <m0> | <m1> ) .*
+lines that contain <m0> but do not contain <m1>	( .* <m0> .* ) & ( ~ ( .* <m1> .* ) )
+lines where <m0> is between <m1> and <m2>	.* <m1> .* <m0> .* <m2> .* | .* <m2> .* <m0> .* <m1> .*
+lines that contain a word in all uppercase	.* \b [A-Z] + \b .*
+lines which start with the word <m0>	\b <m0> \b .*
+lines containing 3 or more vowels and 5 or more words	( .* [AEIOUaeiou] .* ) { 3 , } & ( .* \b [A-Za-z] + \b .* ) { 5 , }
+lines that contain words starting with <m0>	.* \b <m0> [A-Za-z] * \b .*
+6 letter lines	[A-Za-z] { 6 }
+lines with <m0> 	.* <m0> .*
+lines using a capital letter followed by a number	.* [A-Z] .* [0-9] .*
+lines that start with <m0> and end with <m1>	<m0> .* <m1>
+lines ending with <m0>	.* <m0>
+lines that contain a number	.* [0-9] .*
+lines that have words ending with a <m0>	.* ( ( \b .* <m0> \b ) & ( [A-Za-z] + ) ) .*
+lines that contain 2 repetitions of the word <m0>	( .* \b <m0> \b .* ) { 2 }
+lines that utilize words starting with <m0>	.* \b <m0> [A-Za-z] * \b .*
+lines that show the text <m0> and the word <m1>	( .* <m0> .* ) & ( .* \b <m1> \b .* )
+lines that contain three or more digits	( .* [0-9] .* ) { 3 }
+lines using <m0> or <m1>	.* ( <m0> | <m1> ) .*
+lines that are only comprised of uppercase letters	[A-Z] *
+lines using <m0> before <m1>	.* <m0> .* <m1> .*
+lines with the word <m0> between <m1> and <m2>	.* <m1> .* \b <m0> \b .* <m2> .* | .* <m2> .* \b <m0> \b .* <m1> .*
+lines containing the number 11 and the word <m0>	( .* 1 1 .* ) & ( .* <m0> .* )
+lines that are composed of the letters <m0>, <m1>, and <m2>	( <m0> | <m1> | <m2> ) *
+lines that mention <m0> and also contain <m1>	( .* <m0> .* ) & ( .* <m1> .* )
+lines utilizing <m0>	.* \ <m0> .*
+lines that end with vowels	.* [AEIOUaeiou]
+lines that have <m0> after <m1> or <m2>	.* ( <m1> | <m2> ) .* <m0> .*
+lines starting with <m0>	<m0> .*
+lines containing one instance of <m0> followed by an <m1> or a <m2>	.* ( .* <m0> .* ( <m1> | <m2> ) .* ) .*
+lines where there are exactly two words and 7 characters	( ( ( [^A-Za-z] ) * \b [A-Za-z] + \b ( [^A-Za-z] ) * ) { 2 } & . { 7 } )
+lines that have 3 words and two numbers	( .* \b [A-Za-z] + \b .* ) { 3 } & ( .* [0-9] .* ) { 2 }
+lines using words starting with <m0>	.* \b <m0> [A-Za-z] * \b .*
+lines with <m0>	.* <m0> .*
+lines containing words which begin with <m0> and end with <m1>	.* \b <m0> [A-Za-z] * <m1> \b .*
+lines containg the number <m0>	.* <m0> .*
+lines that utilize words starting with <m0> followed by the word <m1>	.* ( ( \b [A-Za-z] + \b ) & ( <m0> .* ) ) .* \b <m1> \b .*
+lines which begin with <m0>, has a <m1> in the middle and end in a number	<m0> .* <m1> .* [0-9]
+lines containing <m0> and containing <m1> too	( .* <m0> .* ) & ( .* <m1> .* )
+lines that contain the <m0>	.* <m0> *
+lines that use <m0> but not <m1> or <m2>	( .* <m0> .* ) & ( ~ ( .* ( <m1> | <m2> ) .* ) )
+lines that contain words starting with <m0>	.* \b <m0> [A-Za-z] * \b .*
+lines that contain only 2 words, and, begin with the letter <m0>	<m0> .* & ( ( [^A-Za-z] ) * \b [A-Za-z] + \b ( [^A-Za-z] ) * ) { 2 }
+lines containing only four words	( ( [^A-Za-z] ) * \b [A-Za-z] + \b ( [^A-Za-z] ) * ) { 4 }
+lines which do not contain <m0>	~ ( .* <m0> .* )
+lines that end with <m0> 	.* <m0>
+lines that have no instances of <m0> but at least one instance of <m1>	( ~ ( .* <m0> .* ) ) & ( ( .* <m1> .* ) { 1 , } )
+lines that utilize words starting with <m0>	.* \b <m0> [A-Za-z] * \b .*
+lines using words that end with the letter <m0>	.* \b [A-Za-z] * <m0> \b .*
+lines that use numbers	.* [0-9] .*
+lines having words starting with <m0>	.* ( ( \b [A-Za-z] [A-Za-z] * \b ) & ( <m0> .* ) ) .*
+lines using words that have <m0>	.* \b [A-Za-z] * <m0> [A-Za-z] * \b .*
+lines that only have 3 words	( ( [^A-Za-z] ) * \b [A-Za-z] + \b ( [^A-Za-z] ) * ) { 3 }
+lines that contain words starting in <m0>	.* ( ( \b [A-Za-z] [A-Za-z] * \b ) & ( <m0> .* ) ) .*
+lines that contain text made up of more than 6 letters total	( .* [A-Za-z] .* ) { 7 , }
+lines that contain the letter <m0> in the middle of a word	.* ( \b [A-Za-z] + <m0> [A-Za-z] + \b ) .*
+lines where the letter <m0> appears exactly 4 times	( [ ^ <m0> ] * <m0> [ ^ <m0> ] * ) { 4 }
+lines that contain a word  starting with <m0>	.* \b <m0> [A-Za-z] * \b .*
+lines that contain a word with five or more vowels	.* ( ( \b [A-Za-z] [A-Za-z] * \b ) & ( .* [AEIOUaeiou] .* ) { 5 } ) .*
+lines which do not begin with an uppercase letter	~ ( [A-Z] .* )
+lines which start with <m0> and end with <m1>	( <m0> .* ) & ( .* <m1> )
+lines that contain at least two words beginging with <m0>	( .* \b <m0> [A-Za-z] * \b .* ) { 2 }
+lines that have a word containing the string <m0>	.* \b [A-Za-z] * <m0> [A-Za-z] * \b .*
+lines having words with <m0>	.* \b [A-Za-z] * <m0> [A-Za-z] * \b .*
+lines using 4 or more words	( .* \b [A-Za-z] + \b .* ) { 4 , }
+lines using at least 4 <m0>	( .* <m0> .* ) { 4 , }
+lines starting with <m0>	<m0> .*
+lines that contain <m0> written in words	.* <m0> .*
+lines that have at least 3 words	( .* \b [A-Za-z] + \b .* ) { 3 }
+lines which have 3 words	.* ( .* \b [A-Za-z] + \b .* ) { 3 } .*
+lines utilizing the phrase <m0>	.* <m0> .*
+lines that contain words starting with <m0>	.* ( ( \b [A-Za-z] + \b ) & ( <m0> .* ) ) .*
+lines using the vowel combination <m0> and <m1>	( .* <m0> .* ) & ( .* <m1> .* )
+lines which contain <m0> but do not contain the letter <m1>	( .* <m0> .* ) & ~ ( .* <m1> .* )
+lines that have any instance of <m0>	.* <m0> .*
+lines using the letter sequence <m0> followed by a word ending in <m1>	.* <m0> .* \b [A-Za-z] * <m1> \b .*
+lines having words ending with <m0>	.* \b [A-Za-z] * <m0> \b .*
+lines that feature <m0> or <m1> before words that start with capital letters	.* ( <m0> | <m1> ) .* \b [A-Z] [A-Za-z] * \b .*
+lines using <m0> between <m1> and <m2>	.* ( <m1> .* <m0> .* <m2> | <m2> .* <m0> .* <m1> ) .*
+lines that list the word <m0>	.* \b <m0> \b .*
+lines which have at least one word which has six or more letters	.* \b [A-Za-z] { 6 , } \b .*
+lines containing vowels	.* [AEIOUaeiou] .*
+lines starting with <m0>	<m0> .*
+lines that utilize words starting with <m0>	.* \b <m0> [A-Za-z] * \b .*
+lines that contain numbers	.* [0-9] .*
+lines containing 4 words	( .* \b [A-Za-z] + \b .* ) { 4 , }
+lines that have three numbers between <m0> and <m1>	.* ( <m0> .* ( .* [0-9] .* ) { 3 } .* <m1> | .* <m1> .* ( .* [0-9] .* ) { 3 } .* <m0> ) .*
+lines that use <m0> and <m1>	( .* <m0> .* ) & ( .* <m1> .* )
+lines that does not contain any vowels	~ ( .* [AEIOUaeiou] .* )
+lines that have 5 or more words of 3 or fewer letters	( .* \b [A-Za-z] { 1 , 3 } \b .* ) { 5 , }
+lines that contain a <m0> or an <m1>	( .* \ <m0> .* ) | ( .* <m1> .* )
+lines that begin with a number	[0-9] .*
+lines that contain at least 2 digits	( .* [0-9] .* ) { 2 , }
+lines that use a numerical number	.* [0-9] .*
+lines that contain words using <m0>	.* \b [A-Za-z] * <m0> [A-Za-z] * \b .*
+lines that contain <m0> and contain <m1>	( .* <m0> .* ) & ( .* <m1> .* )
+lines where there is only one word	[^A-Za-z] * \b [A-Za-z] + \b [^A-Za-z] *
+lines containing only a letter	[A-Za-z]
+lines containing the word <m0>	.* \b <m0> \b .*
+lines that have words containing <m0>	.* \b [A-Za-z] * <m0> [A-Za-z] * \b .*
+lines that contain words ending in <m0>	.* \b [A-Za-z] * <m0> \b .*
+lines that have words ending in <m0>	.* \b [A-Za-z] * <m0> \b .*
+lines that include both <m0> and <m1>	( .* <m0> .* ) & ( .* <m1> .* )
+lines using 1 number and 2 letters	.* ( .* [0-9] .* ) & ( .* [A-Za-z] .* ) { 2 } .*
+lines using five letter words	.* \b [A-Za-z] { 5 } \b .*
+lines containing <m0> or <m1>	.* ( <m0> | <m1> ) .*
+lines using 6 instances of <m0>	.* ( .* <m0> .* ) { 6 } .*
+lines that have at least 6 characters	. { 6 , }
+lines that have six letter words ending in <m0>	.* \b [A-Za-z] { 4 } <m0> \b .*
+lines containing the word <m0> at the end	.* \b <m0>
+lines that contain 5 numbers and 2 words that contain <m0>	.* ( .* [0-9] .* ) { 5 } & ( .* \b [A-Za-z] * <m0> [A-Za-z] * \b .* ) { 2 } .*
+lines that utilize only three words	( ( [^A-Za-z] ) * \b [A-Za-z] + \b ( [^A-Za-z] ) * ) { 3 }
+lines using <m0> or <m1>	.* ( <m0> | <m1> ) .*
+lines that have no vowels	~ ( .* [AEIOUaeiou] .* )
+lines that have a number in them	.* [0-9] .*
+lines that contain 7 or more words	( .* \b [A-Za-z] + \b .* ) { 7 }
+lines using words starting with <m0>	.* ( ( \b [A-Za-z] + \b ) & ( <m0> .* ) ) .*
+lines that use words ending with <m0>	.* \b [A-Za-z] * <m0> \b .*
+lines which mention <m0> with the word <m1>	.* ( .* <m0> .* ) & ( .* \b <m1> \b .* ) .*
+lines that have a number, but only if it is followed by <m0>	.* [0-9] .* <m0> .*
+lines that contain two words that have two letters	( .* \b [A-Za-z] { 2 } \b .* ) { 2 }
+lines that end in <m0> and begins in <m1>	<m1> .* <m0>
+lines that match to the text <m0>	.* <m0> .*
+lines which end with <m0> 	.* <m0>
+lines that begins with the word <m0>	<m0> \b .*
+lines using the word <m0>	.* ( .* \b <m0> \b .* ) .*
+lines that utilize words starting with <m0>	.* ( ( [A-Za-z] + ) & ( \b <m0> .* \b ) ) .*
+lines that contain <m0> and contain <m1>	( .* <m0> .* ) & ( .* <m1> .* )
+lines that are composed of 5 words or less where at least one word begins with the letter <m0>	( ( [^A-Za-z] * \b [A-Za-z] + \b [^A-Za-z] * ) { 0 , 5 } ) & ( .* \b <m0> [A-Za-z] * \b .* )
+lines that contain three words that start with the letter <m0>	( .* \b <m0> [A-Za-z] * \b .* ) { 3 }
+lines that contain a 3 letter word and a 2 letter word	.* ( .* \b [A-Za-z] { 3 } \b .* ) & ( .* \b [A-Za-z] { 2 } \b .* ) .*
+lines that contain a word starting with <m0> and ending with <m0>	.* \b <m0> ( [A-Za-z] * <m0> ) ? \b .*
+lines that start with words containing <m0>	\b [A-Za-z] * <m0> [A-Za-z] * \b .*
+lines that use the number <m0>	.* <m0> .*
+lines which start with <m0>	<m0> .*
+lines that have only two words in them	( ( [^A-Za-z] ) * \b [A-Za-z] + \b ( [^A-Za-z] ) * ) { 2 }
+lines that contain 4 or more <m0>	( .* <m0> .* ) { 4 }
+lines containing words using the letters <m0>	.* \b [A-Za-z] * <m0> [A-Za-z] * \b .*
+lines which have instances of <m0>	.* <m0> .*
+lines using the string <m0>	.* <m0> .*
+lines that have <m0> between <m1> and <m2>	.* <m1> .* <m0> .* <m2> .* | .* <m2> .* <m0> .* <m1> .*
+lines containing the country name <m0>	.* <m0> .*
+lines which contain both <m0> and <m1> but no instances of <m2>	( .* <m0> .* ) & ( .* <m1> .* ) & ( ~ ( .* <m2> .* ) )
+lines that contain a number and contain a 3 letter word	( .* \b [A-Za-z] { 3 } \b .* ) & ( .* [0-9] .* )
+lines which start with <m0>	<m0> .*
+lines using <m0> before <m1>	.* <m0> .* <m1> .*
+lines containing <m0> before <m1>	.* <m0> .* <m1> .*
+lines that begin with <m0> and end with <m1>	<m0> .* <m1>
+lines containing <m0> and containing the word <m1>	.* <m0> .* & ( .* \b <m1> \b .* )
+lines using 5 or more words	( .* \b [A-Za-z] + \b .* ) { 5 }
+lines that contain words with at least 3 vowels	.* ( ( \b [A-Za-z] + \b ) & ( .* [AEIOUaeiou] .* ) { 3 } ) .*
+lines that have <m0> after <m1>	.* <m1> .* <m0> .*
+lines containing the word <m0>	.* \b <m0> \b .*
+lines that feature the word <m0>, and at least 3 words of 6 letters or more	( .* \b <m0> \b .* ) & ( .* \b [A-Za-z] { 6 , } \b .* ) { 3 , }
+lines using 2 instances of <m0>	.* ( .* <m0> .* ) { 2 } .*
+lines that contain 4 or more capital letters	.* ( .* [A-Z] .* ) { 4 } .*
+lines that end with <m0> 	.* <m0>
+lines that contain four letter words	.* \b [A-Za-z] { 4 } \b .*
+lines that start with <m0> 	<m0> .*
+lines that contain <m0> 	.* <m0> .*
+lines that begin with a number and end with <m0> or <m1>	[0-9] .* ( <m0> | <m1> )
+lines with vowels	.* [AEIOUaeiou] .*
+lines using <m0>, <m1>, or <m2>	.* ( <m0> | <m1> | <m2> ) .*
+lines that contain the text <m0>	.* <m0> .*
+lines that contain the word <m0> in them	.* \b <m0> \b .*
+lines that have less than 6 words but more than 3 words	( [^A-Za-z] * \b [A-Za-z] + \b [^A-Za-z] * ) { 0 , 5 } & ( .* \b [A-Za-z] + \b .* ) { 4 , }
+lines using at least 2 instances of <m0>	( .* <m0> .* ) { 2 , }
+lines containing words that start with <m0>	.* \b <m0> [A-Za-z] * \b .*
+lines containing <m0>, but not <m1>	( .* <m0> .* ) & ( ~ ( .* <m1> .* ) )
+lines which have words beginning with <m0>	.* \b <m0> [A-Za-z] * \b .*
+lines where there is at least one word in which <m0> follows <m1>	.* ( ( \b [A-Za-z] [A-Za-z] * \b ) & ( .* <m1> .* <m0> .* ) ) .*
+lines having words ending with <m0>	.* ( ( \b [A-Za-z] + \b ) & ( .* <m0> ) ) .*
+lines that contain words that end in <m0> that do not begin with <m1>	.* ( ( \b [A-Za-z] + \b ) & ( .* <m0> ) & ( ~ ( <m1> .* ) ) ) .*
+lines that contain 5 or more words	.* ( .* \b [A-Za-z] [A-Za-z] * \b .* ) { 5 } .*
+lines that contain words ending in <m0>	.* \b [A-Za-z] * <m0> \b .*
+lines that contain any numbers	.* [0-9] .*
+lines utilizing the number <m0>	.* <m0> .*
+lines that use the word <m0>	.* \b <m0> \b .*
+lines which do not have numbers	~ ( .* [0-9] .* )
+lines that end with numbers	.* [0-9]
+lines containing words that  have 5 letters in them	.* \b [A-Za-z] { 5 } \b .*
+lines with instances of <m0>	.* <m0> .*
+lines which contain <m0> and <m1>	( .* <m0> .* ) & ( .* <m1> .* )
+lines that do not use the word <m0>	~ ( .* \b <m0> \b .* )
+lines that contain either of <m0> or <m1>	.* ( <m0> | <m1> ) .*
+lines using three letter words	.* \b [A-Za-z] { 3 } \b .*
+lines containing the word <m0>	.* \b <m0> \b .*
+lines containing the word <m0>	.* \b <m0> \b .*
+lines where the word <m0> appears between the words <m1> and <m2>	.* \b <m1> \b .* \b <m0> \b .* \b <m2> \b .* | .* \b <m2> \b .* \b <m0> \b .* \b <m1> \b .*
+lines with numbers	.* [0-9] .*
+lines that contain a period after a number, but only if before <m0>	.* [0-9] .* \ . .* <m0> .*
+lines that contain at least 2 vowels in a word	.* ( ( \b [A-Za-z] + \b ) & ( .* [AEIOUaeiou] .* ) { 2 } ) .*
+lines that have two words containing 5 or more letters	( .* \b [A-Za-z] { 5 , } \b .* ) { 2 }
+lines using <m0> or <m1>	.* ( <m0> | <m1> ) .*
+lines that have 4 characters	. { 4 }
+lines that end in <m0> but do not contain <m1>	( .* \ <m0> ) & ( ~ ( .* <m1> .* ) )
+lines with three numbers and the word <m0>	( .* [0-9] .* ) { 3 } & ( .* \b <m0> \b .* ) .*
+lines that have no letters	~ ( .* [A-Za-z] .* )
+lines using <m0> or <m1>	.* ( <m0> | <m1> ) .*
+lines containing the word <m0>	.* \b <m0> \b .*
+lines that utilize the number <m0>	.* <m0> .*
+lines using 3 instances of <m0>	.* ( .* <m0> .* ) { 3 } .*
+lines that include words with <m0>	.* ( ( \b [A-Za-z] + \b ) & ( .* <m0> .* ) ) .*
+lines having words ending with <m0>	.* ( ( \b [A-Za-z] + \b ) & ( .* <m0> ) ) .*
+lines that contain 3 words	( .* \b [A-Za-z] + \b .* ) { 3 }
+lines using 7 <m0>	( .* <m0> .* ) { 7 }
+lines that contain the word <m0>	.* \b <m0> \b .*
+lines that contain <m0> after <m1> or <m2>	.* ( <m1> | <m2> ) .* <m0> .*
+lines that contain words using the letters <m0>	.* \b [A-Za-z] * <m0> [A-Za-z] * \b .*
+lines that ends with <m0> and contain two numbers	( .* [0-9] .* ) { 2 } <m0>
+lines containing only one word	( [^A-Za-z] ) * \b [A-Za-z] + \b ( [^A-Za-z] ) *
+lines that contain the text, <m0>	.* <m0> .*
+lines using the word <m0> followed by the word <m1>	( .* \b <m0> \b .* ) ( .* \b <m1> \b .* )
+lines which do have numbers	.* [0-9] .*
+lines that utilize the <m0> symbol	.* ( .* \ <m0> .* )
+lines where there are three characters between instances of <m0> and <m1>	.* <m0> .* . { 3 } .* <m1> .* | .* <m1> .* . { 3 } .* <m0> .*
+lines containing <m0> and <m1>	( .* <m0> .* ) & ( .* <m1> .* )
+lines that have more than 5 words ending with a <m0>	( .* \b [A-Za-z] * <m0> \b .* ) { 6 , }
+lines containing <m0> and also containing <m1>	( .* <m0> .* ) & ( .* <m1> .* )
+lines that contain <m0> or <m1>	.* ( <m0> | <m1> ) .*
+lines using a 3 letter sequence starting with <m0>	.* <m0> [A-Za-z] { 2 } .*
+lines that start with the letter <m0>	<m0> .*
+lines with <m0> 	.* <m0> .*
+lines that have <m0>	.* <m0> .*
+lines that do not contain a number	~ ( .* [0-9] .* )
+lines containing <m0> or <m1>	.* ( <m0> | <m1> ) .*
+lines that contain <m0> and the word <m1>	( .* <m0> .* ) & ( .* \b <m1> \b .* )
+lines containing <m0> and containing a <m1> as well	.* ( .* <m0> .* ) & ( .* <m1> .* ) .*
+lines that have the letter <m0> at the end of a word	.* \b [A-Za-z] * <m0> \b .*
+lines using at least 4 characters	.* . { 4 } .*
+lines that have the word <m0>, and at least 1 number	( .* \b <m0> \b .* ) & ( .* [0-9] .* )
+lines that contain the words <m0> and  <m1>	( .* \b <m0> \b .* ) & ( .* \b <m1> \b .* )
+lines using <m0> immediately after <m1>	.* <m1> <m0> .*
+lines that start with <m0> 	<m0> .*
+lines in which there are words that begin with <m0>	.* \b <m0> [A-Za-z] * \b .*
+lines that begin with the word <m0>	\b <m0> \b .*
+lines that contain words using <m0> in them	.* ( .* \b [A-Za-z] * <m0> [A-Za-z] * \b .* ) .*
+lines that use <m0> followed by words starting with <m1>	.* <m0> .* ( ( \b [A-Za-z] + \b ) & ( <m1> .* ) ) .*
+lines utilizing the number <m0>	.* <m0> .*
+lines that contain at least one vowel in each word	~ ( .* ( ( \b [A-Za-z] + \b ) & ( [^AEIOUaeiou] * ) ) .* )
+lines ending with <m0>	.* <m0>
+lines composed of at least 3 words of 4 or more letters	( .* \b [A-Za-z] { 4 , } \b .* ) { 3 , }
+lines that have at least five words that start with a vowel	( .* \b [AEIOUaeiou] [A-Za-z] * \b .* ) { 5 }
+lines that use the <m0> symbol	.* \ <m0> .*
+lines that have three words of five letters each	( .* \b [A-Za-z] { 5 } \b .* ) { 3 }
+lines that begin with the word <m0>	<m0> \b .*
+lines of 6 characters that end with the letter <m0>	. { 5 } <m0>
+lines that contain the word <m0> but not <m1>	( .* <m0> .* ) & ( ~ ( .* <m1> .* ) )
+lines that have <m0> followed by the word <m1>	.* <m0> .* \b <m1> \b .*
+lines that contain words starting with the letter <m0>	.* \b <m0> [A-Za-z] * \b .*
+lines that contain 5 or less words that have 4 or more letters where one of those letters is an <m0>	( [^A-Za-z] * ( ( \b [A-Za-z] + \b ) & ( [A-Za-z] { 4 , } ) & ( .* <m0> .* ) ) [^A-Za-z] * ) { 0 , 5 }
+lines that contain words starting with <m0>	.* \b <m0> [A-Za-z] * \b .*
+lines that have the numbers <m0> and <m1>	( .* <m0> .* ) & ( .* <m1> .* )
+lines that have words that start with <m0>	.* \b <m0> [A-Za-z] * \b .*
+lines that contain at least one word without any vowels	.* ( ( \b [A-Za-z] + \b ) & ( ~ ( .* [AEIOUaeiou] .* ) ) ) .*
+2 letter lines	[A-Za-z] { 2 }
+lines using words that end with a vowel	.* \b [A-Za-z] * [AEIOUaeiou] \b .*
+lines that have words ending with <m0>	.* ( ( \b .* <m0> \b ) & ( [A-Za-z] + ) ) .*
+lines using at least 5 characters	.* . { 5 } .*
+lines where numbers exist only after a sequence of <m0> and <m1>	( [^0-9] * ) | ( ( ( [^0-9] * ) & ( .* <m0> .* ) & ( .* <m1> .* ) ) .* )
+lines with <m0> and not <m1>	( .* <m0> .* ) & ( ~ ( .* <m1> .* ) )
+lines which have <m0> and <m1> but not <m2> or <m3>	( ( .* <m0> .* ) & ( .* <m1> .* ) & ( ~ ( .* ( <m2> | <m3> ) .* ) ) )
+lines that start with <m0> or <m1>	<m0> .* | <m1> .*
+lines using more than 5 characters	.* . { 6 , } .*
+lines which contain multiple quoted words	( .* \ ' [A-Za-z] + \ ' .* ) { 2 , }
+lines that contain the word <m0> but do not contain the word <m1>	( .* \b <m0> \b .* ) & ( ~ ( .* \b <m1> \b .* ) )
+lines that only contain vowels	[AEIOUaeiou] *
+lines that have words ending in <m0> or <m1>	.* \b [A-Za-z] * ( <m0> | <m1> ) \b .*
+lines with <m0> as a stand alone word	.* \b <m0> \b .*
+lines containing the word <m0>	.* \b <m0> \b .*
+lines containing both letters and numbers, but no capitals	( .* [A-Za-z] .* ) & ( .* [0-9] .* ) & ( ~ ( .* [A-Z] .* ) )
+lines using at least two numbers, <m0>, and <m1>	( .* [0-9] .* ) { 2 } & ( .* <m0> .* ) & ( .* <m1> .* )
+lines that utilize the number <m0>	.* <m0> .*
+lines containing the letter <m0> but not the letter <m1>	( .* <m0> .* ) & ( ~ ( .* <m1> .* ) )
+lines containing 3 letter words starting with <m0> 	.* \b <m0> [A-Za-z] { 2 } \b .*
+lines using a word starting with a vowel and ending with <m0>	.* \b [AEIOUaeiou] [A-Za-z] * <m0> \b .*
+lines that use words ending in <m0>	.* ( ( .* <m0> ) & ( \b [A-Za-z] [A-Za-z] * \b ) ) .*
+lines with words matching the word <m0>	.* \b <m0> \b .*
+lines that start with <m0>	<m0> .*
+lines utilizing words with <m0>	.* ( ( \b [A-Za-z] + \b ) & ( .* <m0> .* ) ) .*
+lines in which all words start with the letter <m0>	~ ( .* ( ( \b [A-Za-z] + \b ) & ( [ ^ <m0> ] .* ) ) .* )
+lines that begin with a vowel and end with a vowel	[AEIOUaeiou] ( .* [AEIOUaeiou] ) ?
+lines that contain words starting with <m0>	.* \b <m0> [A-Za-z] * \b .*
+lines that mention <m0> but not <m1>	( .* <m0> .* ) & ( ~ ( .* <m1> .* ) )
+lines having the letter <m0>	.* <m0> .*
+lines which contain <m0> and <m1>	.* <m0> .* <m1> .* | .* <m1> .* <m0> .*
+lines using <m0> or <m1>	.* ( <m0> | <m1> ) .*
+lines that start with <m0> and end in a number	<m0> .* [0-9]
+lines that end with <m0>	.* \ . \ . \ .
+lines containing 3 or more <m0> 	( .* <m0> .* ) { 3 , }
+lines that contain <m0> in each word	~ ( .* ( ( \b [A-Za-z] + \b ) & ( [ ^ <m0> ] * ) ) .* )
+lines that contain the phrase <m0> or <m1>	.* ( <m0> | <m1> ) .*
+lines that contain words starting with <m0>	.* \b <m0> [A-Za-z] * \b .*
+lines containing words that end with <m0>	.* \b [A-Za-z] * <m0> \b .*
+lines using words which have a vowel	.* \b [A-Za-z] * [AEIOUaeiou] [A-Za-z] * \b .*
+lines using <m0> before <m1>	.* <m0> .* <m1> .*
+lines that contain <m0> before <m1> or <m2>	.* <m0> .* ( <m1> | <m2> ) .*
+lines using words that begin with the letter <m0>	.* \b <m0> [A-Za-z] * \b .*
+lines containing words ending with <m0>	.* \b [A-Za-z] * <m0> \b .*
+lines that start with <m0> 	<m0> .*
+lines composed of 3 or more characters	.* . { 3 , } .*
+lines that start with <m0> but do not contain any numbers	( <m0> .* ) & ( ~ ( .* [0-9] .* ) )
+lines using words ending in <m0>	.* \b [A-Za-z] * <m0> \b .*
+lines with words that end with <m0> before words that end with <m1>	.* \b [A-Za-z] * <m0> \b .* \b [A-Za-z] * <m1> \b .*
+lines that contain words with <m0>	.* ( ( \b [A-Za-z] + \b ) & ( .* <m0> .* ) ) .*
+lines containing words ending in <m0> 	.* \b [A-Za-z] * <m0> \b .*
+lines that use only four words	( ( [^A-Za-z] ) * \b [A-Za-z] + \b ( [^A-Za-z] ) * ) { 4 }
+lines ending with the letter <m0>	.* <m0>
+lines that end in <m0>	.* <m0>
+lines that start with the letter <m0>	<m0> .*
+lines containing a 5 letter word beginning with <m0>	.* \b <m0> [A-Za-z] { 4 } \b .*
+lines ending with <m0>	.* <m0>
+lines ending with <m0>	.* <m0>
+lines that contain <m0> or <m1>	.* ( <m0> | <m1> ) .*
+lines that contain at least one word and the number <m0>	.* ( .* \b [A-Za-z] + \b .* ) & ( .* <m0> .* ) .*
+lines ending with <m0> that use the word <m1>	.* \b <m1> \b .* <m0>
+lines that contain at least one digit	.* [0-9] .*
+lines starting and ending with <m0>	<m0> ( .* <m0> ) ?
+lines that have <m0>	.* <m0> .*
+lines of words whose last letters are <m0>	.* \b [A-Za-z] * <m0> \b .*
+lines beginning with the letter <m0> and ending with the letter <m1>	<m0> .* <m1>
+lines that use words ending with <m0>	.* \b [A-Za-z] * <m0> \b .*
+lines that have 3 characters after the first vowel	.* [AEIOUaeiou] .* ( . { 3 } ) .*
+lines ending in <m0> preceded by a word that ends in <m1>	.* \b [A-Za-z] * <m1> \b .* <m0>
+lines using the word <m0> followed by the letters <m1>	.* \b <m0> \b .* <m1> .*
+lines that contain words starting with <m0>	.* \b <m0> [A-Za-z] * \b .*
+lines that have the word <m0>	.* \b <m0> \b .*
+lines that contain words between <m0> and <m1>	.* <m0> .* \b [A-Za-z] + \b .* <m1> .* | .* <m1> .* \b [A-Za-z] + \b .* <m0> .*
+lines that contain 3 words with at least 1 number in between the 1st and 3rd word	[^A-Za-z] * \b [A-Za-z] + \b ( ( .* \b [A-Za-z] + \b .* ) & ( .* [0-9] .* ) ) \b [A-Za-z] + \b [^A-Za-z] *
+lines containing the text <m0>	.* <m0> .*
+lines with <m0> where the word <m1> does not appear before <m0> in that line	( .* <m0> .* ) & ( ~ ( .* \b <m1> \b .* <m0> .* ) )
+lines that have a word ending with the letters <m0>	.* \b [A-Za-z] * <m0> \b .*
+lines that each begin with a vowel	[AEIOUaeiou] .*
+lines ending in <m0>	.* <m0>
+lines using 6 <m0>	( .* <m0> .* ) { 6 }
+lines that contain words starting with a vowel and ending with a vowel	.* ( ( \b [A-Za-z] + \b ) & ( [AEIOUaeiou] .* ) & ( .* [AEIOUaeiou] ) ) .*
+lines that contain words using <m0> in them	.* \b [A-Za-z] * <m0> [A-Za-z] * \b .*
+lines which contain <m0> 	.* <m0> .*
+lines using words ending with <m0>	.* \b [A-Za-z] * <m0> \b .*
+lines having <m0> after <m1> and <m2> before <m3>	.* ( ( .* <m1> .* <m0> .* ) & ( .* <m2> .* <m3> .* ) ) .*
+lines that start with the word <m0>	<m0> \b .*
+lines that contain more than five words	( .* \b [A-Za-z] + \b .* ) { 6 , }
+lines that do not contain the letter <m0>	~ ( .* <m0> .* )
+lines starting with <m0>	<m0> .*
+lines that contain words ending with a vowel	.* \b [A-Za-z] * [AEIOUaeiou] \b .*
+lines that contain at least one word which is 8 characters or longer	.* ( ( \b [A-Za-z] + \b ) & ( . { 8 , } ) ) .*
+lines that contain words ending with <m0>	.* ( ( \b [A-Za-z] + \b ) & ( .* <m0> ) ) .*
+lines containing words that end with <m0>	.* ( ( \b .* <m0> \b ) & ( [A-Za-z] + ) ) .* .*
+lines using a word which has uppercase letters and has lowercase letters	.* \b ( ( [A-Za-z] * [A-Z] [A-Za-z] * ) & ( [A-Za-z] * [a-z] [A-Za-z] * ) ) \b .*
+lines that contain words with <m0>	.* \b [A-Za-z] * <m0> [A-Za-z] * \b .*
+lines that start with the letter <m0> and end with the letter <m1>	<m0> .* <m1>
+lines that have three characters before the sequence <m0>	.* . { 3 } <m0> .*
+lines using the letter pair <m0>	.* <m0> .*
+lines containing 3 or more vowels	( .* [AEIOUaeiou] .* ) { 3 , }
+lines which contain a word using 2 or more letters	.* \b [A-Za-z] { 2 , } \b .*
+lines that contain <m0> at the end of every word	~ ( .* ( ( \b [A-Za-z] + \b ) & ( ~ ( .* <m0> ) ) ) .* )
+lines using 4 instances of <m0>	.* ( .* <m0> .* ) { 4 } .*
+lines that do not have <m0> in them	~ ( .* <m0> .* )
+lines containing at least one uppercase letter, and at least one lowercase letter	( .* [A-Z] .* ) & ( .* [a-z] .* )
+lines that contain the phrase <m0> but not <m1>	( .* <m0> .* ) & ( ~ ( .* <m1> .* ) )
+lines containing the word <m0>	.* \b <m0> \b .*
+lines ending with <m0>	.* <m0>
+lines that contain a nine letter word	.* \b [A-Za-z] { 9 } \b .*
+lines with <m0> that do not contain the word <m1>	( .* <m0> .* ) & ( ~ ( .* \b <m1> \b .* ) )
+lines utilizing words ending with <m0>	.* ( ( \b [A-Za-z] + \b ) & ( .* <m0> ) ) .*
+lines that do not have any word consisting of 4 letters	~ ( .* \b [A-Za-z] { 4 } \b .* )
+lines which start with <m0> 	<m0> .*
+lines that do not contain numerical characters	~ ( .* [0-9] .* )
+lines using <m0> and containing the words <m1> and <m2>	( .* <m0> .* ) & ( .* \b <m1> \b .* ) & ( .* \b <m2> \b .* )
+lines containing <m0> and <m1> that do not have a <m2> anywhere	( .* <m0> .* ) & ( .* <m1> .* ) & ( ~ ( .* <m2> .* ) )
+lines using <m0> before <m1>	.* <m0> .* <m1> .*
+lines beginning with the letter <m0>	<m0> .*
+4 letter lines	[A-Za-z] { 4 }
+lines using numbers that show two or more <m0>	.* ( .* <m0> .* ) { 2 , } .*
