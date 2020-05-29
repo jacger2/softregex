@@ -1,6 +1,6 @@
 # SoftRegex: Generating Regex from Natural Language Descriptions using Softened Regex Equivalence
 
- This is implemantation of the paper [SoftRegex: Generating Regex from Natural Language Descriptions using Softened Regex Equivalence](https://www.aclweb.org/anthology/D19-1677/)
+ This is implemantation of the paper [SoftRegex: Generating Regex from Natural Language Descriptions using Softened Regex Equivalence](https://www.aclweb.org/anthology/D19-1677/) [EMNLP 2019]
  
 --------------
 
