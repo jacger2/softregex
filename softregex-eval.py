@@ -14,7 +14,6 @@ import torch
 from torch.optim.lr_scheduler import StepLR, ReduceLROnPlateau
 import torchtext
 
-import seq2seq
 
 from seq2seq.trainer import SupervisedTrainer, SelfCriticalTrainer
 from seq2seq.models import EncoderRNN, DecoderRNN, Seq2seq, TopKDecoder
